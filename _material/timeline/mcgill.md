@@ -1,11 +1,10 @@
 ---
 layout: main
-permalink: /research.html
 title: Sept 2017 - Present
 image: assets/img/mcgill.jpg
 grouped_by: timeline
 link: https://www.cs.mcgill.ca/
-order: 1
+order: 4
 ---
 
 Master of Science,<br>

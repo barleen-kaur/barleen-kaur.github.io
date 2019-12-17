@@ -11,12 +11,12 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Barleen Kaur # add your name
 author-img: barleen-kaur.jpg # add your photo
-about-author: MSc in Computer Science at McGill University/Mila # add description
+about-author: MSc in Computer Science at McGill University and Mila # add description
 
 social-twitter: ibarleenkaur # add your Twitter handle
 social-github: barleen-kaur # add your Github handle
 social-linkedin: barleen-kaur-a71a1583 # add your Linkedin handle
-social-email:  barleen.kaur@mail.mcgill.ca # add your Email address
+social-email:  barleenk@gmail.com # add your Email address
 
 collections:
   - material

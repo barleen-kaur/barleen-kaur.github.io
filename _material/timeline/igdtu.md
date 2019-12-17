@@ -1,11 +1,10 @@
 ---
 layout: main
-permalink: /research.html
 title: August 2011 - June 2015
 image: assets/img/igit.jpg
 grouped_by: timeline
 link: https://www.igdtuw.ac.in/
-order: 3
+order: 2
 ---
 
 Bachelors of Technology,<br>

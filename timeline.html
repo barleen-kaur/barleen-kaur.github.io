@@ -4,7 +4,7 @@ permalink: /timeline.html
 ---
 
 <h2> My Journey till now..</h2>
-{% assign time_folder = site.material | where_exp: "item" , "item.path contains 'timeline'" | sort:"order"%}
+{% assign time_folder = site.material | where_exp: "item" , "item.path contains 'timeline'" | sort:"order" | reverse %}
 
 <div>
   {% for item in time_folder %}
