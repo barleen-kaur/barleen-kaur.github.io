@@ -1,0 +1,26 @@
+---
+layout: main
+permalink: /timeline.html
+---
+
+<h2> My Journey till now..</h2>
+{% assign time_folder = site.material | where_exp: "item" , "item.path contains 'timeline'" | sort:"order"%}
+
+<div>
+  {% for item in time_folder %}
+  <ul class="timeline">
+  	<li >
+		  <div class="timeline-image">
+		    <a href="{{ item.link }}"><img class="img-circle img-responsive" src="{{ site.baseurl }}/{% if item.image %}{{ item.image }}{% else %}{{site.career-img}}{% endif %}" alt=""></a>
+		  </div>
+		  <div class="container right">
+		    <div class="content">
+		      <h4>{{ item.title }}</h4>
+		      <h4>{{ item.subtitle }}</h4>
+		      <p class="timeline-body">{{ item.content }}</p>
+		    </div>
+		  </div>
+		</li>
+	</ul>
+  {% endfor %}
+</div>

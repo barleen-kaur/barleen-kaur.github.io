@@ -1,0 +1,17 @@
+
+docs:
+
+- title: Home
+  url: index.html
+
+- title: Timeline
+  url: timeline.html
+
+- title: Research
+  url: research.html
+
+- title: Blog
+  url:  blog.html
+
+- title: CV
+  url: assets/Resume.pdf

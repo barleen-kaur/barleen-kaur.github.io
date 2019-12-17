@@ -1,0 +1,108 @@
+I"�<h2 id="motivation">Motivation</h2>
+
+<p>Information retrieval is used to generate the list of potential source code modules, which a
+developer might be interested in changing, in order to fix the bugs. In most cases, the resultant list is large enough for a developer to first search through sequentially to locate the concept of interest. This also overloads the developers to refine their queries multiple times to get smaller result sets. This paper outlines the importance of merging Formal concept analysis (FCA) and Latent semantic indexing (LSI) in order to locate the concept in source code with minimized programmer’s effort.</p>
+
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+  <li>Only identifiers and comments are used as representation of source code.</li>
+  <li>The objects(documents) can be grouped by shared attributes.</li>
+  <li>Penalizing terms which are present in list of unselected documents will help in choosing
+better attributes.</li>
+</ul>
+
+<h2 id="proposed-solution">Proposed Solution</h2>
+<p>The process of concept location is divided into multiple stages:</p>
+<ul>
+  <li><strong>Building the corpus</strong>: On the basis of the level of granularity set by the developers,
+comments and identifiers extracted from the source code are parsed to build the corpus
+in the form of documents such that each document represents a module.</li>
+  <li><strong>Corpus Indexing</strong>: Each document in the corpus, represented in the vector space, is
+indexed using LSI securing the semantic relationship of comments and identifiers in the
+source code.</li>
+  <li><strong>Defining the queries</strong>: Terms used by the developers are matched with the vocabulary of
+the source code. If a term has no match found, then words having similar semantics are
+suggested.</li>
+  <li><strong>Ranking documents</strong>: Documents in the source code are ranked in order of decreasing
+similarity scores with respect to developer’s query.</li>
+  <li><strong>Selection of descriptive attributes</strong>: Attributes(terms) shared by the first n documents inthe ranked list are selected.</li>
+  <li><strong>Applying FCA</strong>: A concept lattice structure is formed from the set of n highly ranked
+documents and the shared attributes. Each node in the lattice has a descriptive label
+which corresponds to an attribute and the list of documents sharing that attribute.</li>
+  <li><strong>Analyzing the results</strong>: User traverses through the lattice to locate the concept or
+redefines his query.</li>
+</ul>
+
+<h2 id="evaluation">Evaluation</h2>
+<p>The authors have evaluated their research work using Eclipse as a platform.
+Using methods as the level of granularity, the documents in the source code of eclipse are
+preprocessed and indexed using LSI as mentioned in the methodology.
+The authors have introduced two evaluation metrics:</p>
+<ul>
+  <li>Lattice distillation factor(LDF): degree of improvements made in precision with the
+concept lattice over ranking list of documents.</li>
+  <li>Lattice browsing capacity(LBC): percentage of nodes in the concept lattice that a user
+needs to explore in order to locate the first occurrence of concept.</li>
+  <li>The authors studied the effect of varying the number of documents (n) chosen from the ranked list and number of shared attributes (k) on the ease of locating concept in case of two bugs in eclipse. Experimental results show significant improvement in the field of concept location through lattice structure with LDF reaching 318%.</li>
+</ul>
+
+<h2 id="possible-threats-to-validity-of-the-proposed-solution">Possible threats to Validity of the proposed solution</h2>
+
+<ul>
+  <li>Finding the optimal value of number of documents (n) and shared attributes(k):
+Deciding on the factors n, k so that the results are optimized is important as in the
+paper, results show that the authors couldn’t generate any desired results in case of 80
+documents for bug #25457.</li>
+  <li>Evaluation was done taking just two bugs into account. Their approach should have
+been evaluated on more software platforms and different program architectures.</li>
+  <li>The proposed solution is highly dependent on how the developer frames the query.</li>
+  <li>In order to fix a bug, multiple modules of source code can be involved. So, if the
+groupings of objects based on shared attributes represented as nodes in the lattice is
+incorrect, then the validity of proposed solution is doubtful.</li>
+  <li>Considering only comments and identifiers as representatives of the source code is a
+possible threat.</li>
+</ul>
+
+<h2 id="limitationsextensions">Limitations/Extensions</h2>
+
+<ul>
+  <li>This work should have been evaluated on more software platforms and different
+program architectures.</li>
+  <li>Building rules/algorithms for deciding the optimal number of documents to choose
+from the ordered list and which shared attributes to consider in order to build the
+concept lattice.</li>
+  <li>Ranked list is used only for the purpose of selecting the documents. In addition to this, it
+should also be used to position the documents in the lattice.</li>
+  <li>Making standards/possible suggestions on how queries should be formulated.</li>
+  <li>A developer still has to reframe his query if he doesn’t get the desired results in one go.</li>
+  <li>Involving more features other than comments and identifiers and examining the results.</li>
+</ul>
+
+<h2 id="limitationsextensions-1">Limitations/Extensions</h2>
+
+<ul>
+  <li>This work has shown a promising direction in the field of software engineering by
+speeding the process of locating concept by clubbing techniques of formal concept
+analysis and information retrieval.</li>
+  <li>Features can be clubbed together and represented in the form of lattice structures
+which can expedite the process of information retrieval.</li>
+  <li>Provided insights on how to choose evaluation measures like Lattice distillation
+factor(LDF) and Lattice browsing capacity(LBC) in such domain problems.</li>
+</ul>
+
+<!-- ![I and My friends](/assets/img/we-in-rest.jpg)
+
+
+
+>Hexagon shoreditch beard, man braid blue bottle green juice thundercats viral migas next level ugh. Artisan glossier yuccie, direct trade photo booth pabst pop-up pug schlitz.
+
+
+
+* Hexagon shoreditch beard
+* Intelligentsia narwhal austin
+* Literally meditation four
+* Microdosing hoodie woke
+
+-->
+
+:ET

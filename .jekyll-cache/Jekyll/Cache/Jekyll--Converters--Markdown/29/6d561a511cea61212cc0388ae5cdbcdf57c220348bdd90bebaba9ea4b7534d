@@ -1,0 +1,77 @@
+I"!<h2 id="motivation">Motivation</h2>
+
+<ul>
+  <li>Recent research work relate the problem of continual learning to increasing the dataset difficulty.</li>
+  <li>Current experimental set-ups and evaluations are misleading as they are biased towards prior focused approaches.</li>
+  <li>Need to encourage continual strategies that work when all the fundamental desideratum are enforced and not just a subset of them.</li>
+</ul>
+
+<h2 id="contributions">Contributions</h2>
+
+<ul>
+  <li>Thorough analysis of flaws in existing evaluations used by our community.</li>
+  <li>Empirically show that current evaluations are biased towards prior focused approaches.</li>
+  <li>Propose fundamental desiderata for future evaluations of continual learning strategies.</li>
+  <li>Can be applied irrespective of the dataset.</li>
+  <li>Propose new experimental set ups to overcome the issues of exiting ones.</li>
+</ul>
+
+<h2 id="proposed-desiderata">Proposed Desiderata</h2>
+<h4 id="--core-desiderata">- Core Desiderata</h4>
+<ul>
+  <li><strong>A: Cross-task resemblance</strong> : Data for new task must resemble from old task enough to produce confident predictions of old classes sometimes early in training. Permuted MNIST violates this property.</li>
+  <li><strong>B: Shared output head</strong></li>
+  <li><strong>C: No test time assumed task labels</strong></li>
+  <li><strong>D: No unconstrained re-training on old tasks</strong></li>
+  <li><strong>E: More than two tasks</strong> : The more the number of tasks that a CL strategy can deal with, the better.</li>
+</ul>
+
+<h4 id="--other-desiderata">- Other desiderata</h4>
+<ul>
+  <li>Unclear task demarcation</li>
+  <li>Continuous tasks</li>
+  <li>Overlapping tasks</li>
+  <li>Long task sequences</li>
+  <li>Time/Compute/Memory constraints</li>
+  <li>Strict privacy guarantees</li>
+</ul>
+
+<h2 id="critical-analysis-of-existing-evaluations">Critical analysis of existing evaluations</h2>
+
+<ul>
+  <li>Permuted MNIST doesn’t represent real world scenarios for continual learning as it violates desiderata A.</li>
+  <li>Multi-headed version of split MNIST requires knowledge of the task and classes in eah task apriori.</li>
+  <li>Prior based approaches tend to perform much better in multi-headed versions than in single headed versions.</li>
+  <li>Two task transfer is not a realistic evaluation in continual learning as algorithms might fail with more number of tasks.</li>
+</ul>
+
+<h2 id="empirical-analysis-of-existing-evaluations">Empirical analysis of existing evaluations</h2>
+<ul>
+  <li>Experiments considering all the five core desiderata show that prior focussed methods suffer the most.</li>
+  <li>Missing any desiderata can lead to blindspots in the evaluation pipeline.</li>
+  <li>Model uncertainity can be used to detect task changes.</li>
+  <li>Training time and accuracy must be traded off. Memory can be treated like time here.</li>
+</ul>
+
+<h2 id="insights-and-conclusion">Insights and Conclusion</h2>
+
+<ul>
+  <li>Current evaluations are misleading as they are biased towards prior focussed approaches.</li>
+  <li>Continual learning strategies should be evaluated by taking into consideration all the proposed core five desiderata. Single-headed split MNIST is the most simplistic experiment set-up.</li>
+</ul>
+
+<!-- ![I and My friends](/assets/img/we-in-rest.jpg)
+
+
+
+>Hexagon shoreditch beard, man braid blue bottle green juice thundercats viral migas next level ugh. Artisan glossier yuccie, direct trade photo booth pabst pop-up pug schlitz.
+
+
+
+* Hexagon shoreditch beard
+* Intelligentsia narwhal austin
+* Literally meditation four
+* Microdosing hoodie woke
+
+-->
+:ET

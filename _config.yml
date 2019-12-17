@@ -1,0 +1,45 @@
+title: Barleen's corner
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+permalink: ':title/'
+baseurl: "" #/barleen-kaur "/flexible-jekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
+
+# Author Settings
+author: Barleen Kaur # add your name
+author-img: barleen-kaur.jpg # add your photo
+about-author: MSc in Computer Science at McGill University/Mila # add description
+
+social-twitter: ibarleenkaur # add your Twitter handle
+social-github: barleen-kaur # add your Github handle
+social-linkedin: barleen-kaur-a71a1583 # add your Linkedin handle
+social-email:  barleen.kaur@mail.mcgill.ca # add your Email address
+
+collections:
+  - material
+      
+career-img: "img/timeline/school.jpg"
+
+
+# Disqus
+discus-identifier: barleen # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+#theme: flexible-jekyll
+remote_theme: barleen-kaur/barleen-kaur.github.io
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "blog/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
