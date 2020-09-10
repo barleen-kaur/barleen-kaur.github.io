@@ -13,5 +13,6 @@ docs:
 - title: Blog
   url:  blog.html
 
-- title: CV
-  url: assets/Resume.pdf
+
+#- title: CV
+#  url: assets/Resume.pdf
